@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+<h1>Juego de Adivinación</h1>
+<script>
+    function saltarLinea() {
+
+        document.write("<br>");    
+        document.write("<br>");    
+        document.write("<br>"); 
+
+    }  
+
+    function imprimir(frase) {
+
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+
+    }
+
+    var limite = parseInt(prompt("Ingresa el limite para adivinar"))
+
+    function loteria(limite){
+        return sorteo = Math.round(Math.random()*limite)
+    }
+
+    var intentos = 3;
+    var count = 1;
+    var numeroPensado = loteria(limite);
+
+    while(count <= intentos){
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+        if(numeroLanzado == numeroPensado){
+            alert("Adivinaste el número en el intento " + count + "!!");
+            break;
+            
+        }else{
+            alert("Número equivocado");
+        }
+        count++
+    }
+
+    if(numeroLanzado == numeroPensado){
+        imprimir("Adivinaste el número en el intento " + count + "!!");
+    }else{
+        imprimir("El numero pensado era: "+numeroPensado);
+    }
+    alert("Fin");
+
+    //Ternario - Alternativa para el if
+    //numeroLanzado==numeroPensado
+    //?imprimir("Adivinaste el número!!")
+    //:imprimir("Número equivocado")
+
+    
+    
+
+    //if(numeroLanzado > sorteo){
+    //    imprimir("El numero lanzado es mayor")
+    //}else{
+    //    imprimir("El numero lanzado es menor")
+    //}
+    
+</script>

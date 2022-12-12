@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA PARA CALCULAR LA TABLA DE MULTIPLICAR</h1>
+<script>
+    function saltarLinea() {
+
+        document.write("<br>");    
+        document.write("<br>");    
+
+    }  
+
+    function imprimir(frase) {
+
+        document.write("<big>"+frase+"</big>");
+        saltarLinea();
+
+    }
+
+    var multiplo = parseInt(prompt("Ingrese el numero a multiplicar"));
+    var multiplicador = 1;
+
+    //while(multiplicador <= 10){
+    //    imprimir(multiplo * multiplicador);
+    //    multiplicador = multiplicador + 1;
+    //}
+
+    for (multiplicador = 1; multiplicador <= 10; multiplicador++){
+        imprimir(multiplo * multiplicador);
+    }
+
+</script>
